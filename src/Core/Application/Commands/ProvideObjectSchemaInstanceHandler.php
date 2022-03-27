@@ -31,11 +31,8 @@ class ProvideObjectSchemaInstanceHandler implements ProvideSchemaInterfaceHandle
         }
 
         $schema = $command->getSchema();
-        //print_r($schema);
         $handlerMapping = $command->getHandlerMapping();
-
         $keyValueArray = json_decode($value, true, 512, JSON_THROW_ON_ERROR);
-        print_r($keyValueArray);
 
         foreach ($keyValueArray as $key => $propertyValue) {
             //todo
