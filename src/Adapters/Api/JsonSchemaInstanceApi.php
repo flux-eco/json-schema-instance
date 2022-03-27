@@ -2,12 +2,9 @@
 
 namespace FluxEco\JsonSchemaInstance\Adapters\Api;
 
-use FluxEco\JsonSchemaInstance\Core\Domain\Models\ArraySchemaInstance;
-use FluxEco\JsonSchemaInstance\Core\Domain\Models\NumberSchemaInstance;
-use FluxEco\JsonSchemaInstance\Core\Domain\Models\ObjectSchemaInstance;
 use FluxEco\JsonSchemaInstance\Core\Ports;
 
-class SchemaInstanceApi
+class JsonSchemaInstanceApi
 {
 
     private Ports\SchemaInstanceService $service;

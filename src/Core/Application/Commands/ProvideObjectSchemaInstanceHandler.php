@@ -48,12 +48,7 @@ class ProvideObjectSchemaInstanceHandler implements ProvideSchemaInterfaceHandle
                 continue;
             }
 
-            echo "schema".PHP_EOL;
-            print_r($schema);
-            echo PHP_EOL.PHP_EOL;
-
             $this->assertPropertyKeyExistsInSchema($key, $schema['properties']['rootObject']['properties']);
-
 
             $subSchema = $schema['properties']['rootObject']['properties'][$key];
             $type = $subSchema['type'];
