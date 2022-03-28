@@ -1,2 +1,22 @@
-# json-schema-instance
+# flux-eco/json-schema-instance
+
+This component is supposed to make a json schema instance for the transmitted values and schema.
+
+help and support with the development very welcome :-)
+
+https://json-schema.org/specification.html
+
+The following example application demonstrates the usage:
+https://github.com/flux-caps/todo-app
+
+## Contributing :purple_heart:
+Please ...
+1. ... register an account at https://git.fluxlabs.ch
+2. ... create pull requests :fire:
+
+## Adjustment suggestions / bug reporting :feet:
+Please ...
+1. ... register an account at https://git.fluxlabs.ch
+2. ... ask us for a Service Level Agreement: support@fluxlabs.ch :kissing_heart:
+3. ... Read and create issues
 
