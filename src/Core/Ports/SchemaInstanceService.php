@@ -31,7 +31,7 @@ class SchemaInstanceService
         $this->handlerMapping = $handlerMapping;
     }
 
-    public static function new(): self
+    public static function new() : self
     {
         $handlerMapping = [
             'boolean' => Commands\ProvideNumberSchemaInstanceHandler::new(),
@@ -43,9 +43,10 @@ class SchemaInstanceService
         return new self($handlerMapping);
     }
 
-
-    final public function provideSchemaInstance(string $value, array $schema): Domain\Models\ObjectSchemaInstance|Domain\Models\SchemaInstance
-    {
+    final public function getSchemaInstance(
+        string $value,
+        array $schema
+    ) : Domain\Models\ObjectSchemaInstance|Domain\Models\SchemaInstance {
         $process = Processes\ProvideSchemaInstanceProcess::new();
         $command = Commands\ProvideSchemaInstanceCommand::new($value, $schema, $this->handlerMapping);
 
