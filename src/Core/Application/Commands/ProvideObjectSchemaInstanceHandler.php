@@ -61,7 +61,7 @@ class ProvideObjectSchemaInstanceHandler implements ProvideSchemaInterfaceHandle
         }
 
 
-        return Domain\Models\ObjectSchemaInstance::new($properties);
+        return Domain\Models\ObjectSchemaInstance::new($properties, json_encode($subSchema));
     }
 
     private function process(ProvideSchemaInstanceCommand $command, ProvideSchemaInterfaceHandler $handler): Domain\Models\SchemaInstance

@@ -24,7 +24,7 @@ class ProvideBooleanSchemaInstanceHandler implements ProvideSchemaInterfaceHandl
         //ToDo special string validation
         //@see https://json-schema.org/draft/2020-12/json-schema-validation.html
 
-        return Domain\Models\StringSchemaInstance::new($value);
+        return Domain\Models\StringSchemaInstance::new($value, json_encode($schema));
     }
 }
 

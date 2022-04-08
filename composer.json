@@ -1,7 +1,7 @@
 {
   "name": "flux-eco/json-schema-instance",
   "description": "Makes a json schema instance for the transmitted values and schema",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "type": "flux-app",
   "keywords": [
     "flux-eco",
@@ -23,25 +23,19 @@
   },
   "require": {
     "php": ">=8.0",
-    "ext-curl": "*",
     "ext-json": "*",
-    "ext-yaml": "*",
-    "composer-runtime-api": ">=2.1",
-    "psr/http-factory": ">=1.0",
-    "psr/http-message": ">=1.0",
-    "psr/http-server-handler": ">=1.0",
-    "psr/http-server-middleware": ">=1.0"
-  },
-  "require-dev": {
-    "phpunit/phpunit": ">=9.5",
-    "composer/composer": ">=2.0",
-    "swoole/ide-helper": ">=4.6",
-    "symfony/console": ">=5.2"
+    "ext-yaml": "*"
   },
   "autoload": {
+    "files": [
+      "fn/getSchemaInstance.php"
+    ],
     "psr-4": {
       "FluxEco\\JsonSchemaInstance\\": [
         "src/"
+      ],
+      "fluxJsonSchemaInstance\\": [
+        "fn/"
       ]
     }
   },

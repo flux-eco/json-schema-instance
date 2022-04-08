@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [1.0.0]
+provides for a given value a json schema instance of
+* array
+* boolen
+* number
+* object
+* string
+
 ## [0.0.2]
 * added flux-publish-utils
 
