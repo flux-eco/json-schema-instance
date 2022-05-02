@@ -34,6 +34,8 @@ class ProvideObjectSchemaInstanceHandler implements ProvideSchemaInterfaceHandle
         $handlerMapping = $command->getHandlerMapping();
         $keyValueArray = json_decode($value, true, 512, JSON_THROW_ON_ERROR);
 
+
+
         foreach ($keyValueArray as $key => $propertyValue) {
             //todo
             if($key === 'id') {
@@ -44,10 +46,9 @@ class ProvideObjectSchemaInstanceHandler implements ProvideSchemaInterfaceHandle
             if (is_null($propertyValue)) {
                 continue;
             }
+            $this->assertPropertyKeyExistsInSchema($key, $schema['properties']);
 
-            $this->assertPropertyKeyExistsInSchema($key, $schema['properties']['rootObject']['properties']);
-
-            $subSchema = $schema['properties']['rootObject']['properties'][$key];
+            $subSchema = $schema['properties'][$key];
             $type = $subSchema['type'];
             $handler = $handlerMapping[$type];
 
