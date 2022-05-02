@@ -36,6 +36,7 @@ class SchemaInstanceService
         $handlerMapping = [
             'boolean' => Commands\ProvideNumberSchemaInstanceHandler::new(),
             'number' => Commands\ProvideNumberSchemaInstanceHandler::new(),
+            'integer' => Commands\ProvideNumberSchemaInstanceHandler::new(), //??
             'string' => Commands\ProvideStringSchemaInstanceHandler::new(),
             'object' => Commands\ProvideObjectSchemaInstanceHandler::new(),
             'array' => Commands\ProvideArraySchemaInstanceHandler::new(),
